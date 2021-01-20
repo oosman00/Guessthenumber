@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+  <h1>Guess The Number!</h1>
+    <script>
+        let num = Math.floor(Math.random() * 11);
+
+        let gotIt = false;
+        let guess = prompt("guess a number between 1 and 10");
+        let numGuesses = 0; //will store total number of guesses
+        while (gotIt === false)
+        numGuesses++;//increment
+        if(num == guess)
+        {// true - tell user and break out of loop
+            //alert("Got it!");
+
+            //break out of loop
+            gotIt = true
+
+        }else{// false tell user to guess again
+            if(num > guess){//higher!
+                guesss=prompt("higher");
+
+
+            }else{//lower!
+                guess = prompt("lower");
+
+            }
+            //guess = prompt ("Wrong! Guess again!")
+
+        }
+        alert("Got it! You guessed " + numGuesses + " times!");
+    </script>
+</body>
+</html>
